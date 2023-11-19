@@ -38,7 +38,7 @@ jobs:
 
       - name: Update Version
         run: |
-          NEW_VERS=$(python updateVers.py '${{ env.LATEST_TAG }}' '${{ env.COMMIT_MESSAGES }}')
+          NEW_VERS=$(python updateVers.py '${{ env.LATEST_TAG }}' '${{ env.PR_TITLE }}')
           echo "NEW_VERS=$NEW_VERS" >> $GITHUB_ENV
         id: create-next-tag
 
