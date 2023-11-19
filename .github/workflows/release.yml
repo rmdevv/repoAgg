@@ -24,7 +24,7 @@ jobs:
 
       - name: Get Commit Messages
         run: |
-          COMMIT_MESSAGES=$(git log --pretty=%B ${{ github.event.before }}..${{ github.sha }} | grep -v '^Merge pull request')
+          COMMIT_MESSAGES=$(git log --pretty=%B ${{ github.event.pull_request.base.sha }}..${{ github.sha }} | grep -v '^Merge pull request')
           echo "COMMIT_MESSAGES=$COMMIT_MESSAGES" >> $GITHUB_ENV
 
       - name: Setup Python
