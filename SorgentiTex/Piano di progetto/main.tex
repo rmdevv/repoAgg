@@ -4,7 +4,7 @@
 
 \usepackage{style}
 \usepackage{headerfooter}
-
+\usepackage{caption}
 \title{\titolo}
 \author{SWEetCode}
 
@@ -21,12 +21,8 @@
 \tableofcontents
 % SOMMARIO
 \section*{Sommario}
-\subsection*{Elenco delle immagini}
-% Es.Immagine 1: Didascalia.
-\subsection*{Elenco dei grafici}
-% Es.Grafico 1: Didascalia.
-\subsection*{Elenco delle tabelle}
-% Es.Tabella 1: Didascalia.
+\listoffigures
+\listoftables
 \newpage
 
 % INIZIO PAGINE
@@ -34,18 +30,17 @@
 \section{Introduzione}
 
 
-
 \subsection{Scopo del documento}
-\paragraph{}Il documento ha l'obiettivo di definire le risorse da impiegare, le modalità e le tempistiche da seguire per lo svolgimento del progetto. In particolare viene effettuata un'analisi dei rischi attesi, a cui vengono affiancate delle pratiche di mitigazione degli stessi. Si propone inoltre una valutazione dell'efficacia di queste pratiche,così da portare ad eventuali miglioramenti o correzioni delle stesse nel caso in cui non dovessero portare ai risultati desiderati.
-\paragraph{}Il documento si sviluppa poi nelle sezioni di pianificazione delle attività, indicando preventivo e consuntivo di ogni periodo e infine si conclude con la parte di retrospettiva, in cui vengono analizzate la gestione del tempo e del budget e le pratiche che si sono rivelate più o meno buone nel corso dello svolgimento del progetto.
+\paragraph{}Il documento ha l'obiettivo di definire le risorse da impiegare, le modalità e le tempistiche da seguire per lo svolgimento del progetto. In particolare viene effettuata un'\textbf{analisi dei rischi attesi}, a cui vengono affiancate delle \textbf{pratiche di mitigazione} degli stessi. Si propone inoltre una \textbf{valutazione dell'efficacia} di queste pratiche,così da portare ad eventuali miglioramenti o correzioni delle stesse nel caso in cui non dovessero portare ai risultati desiderati.
+\paragraph{}Il documento si sviluppa poi nelle sezioni di \textbf{pianificazione} delle attività, indicando \textbf{preventivo} e \textbf{consuntivo} di ogni periodo e infine si conclude con la parte di \textbf{retrospettiva}, in cui vengono analizzate la gestione del tempo e del budget e le pratiche che si sono rivelate più o meno buone nel corso dello svolgimento del progetto.
 \paragraph{}In aggiunta è necessario specificare che tale documento viene redatto con un approccio incrementale, in maniera tale da poter implementare facilmente dei cambiamenti nel corso del tempo a seconda delle necessità.
 
 
 
-\subsection{Scopo del prodotto}
+%\subsection{Scopo del prodotto}
 
-\subsection{Glossario (da inizializzare )}
-
+\subsection{Glossario}
+Per evitare ambiguità e incomprensioni relative al linguaggio e ai termini utilizzati nella documentazione relativa al progetto viene presentato un Glossario. I termini ambigui o specifici presenti nello stesso, verranno identificati con un pedice |g|. (DA VALUTARE COME RICONOSCERE IL TERMINE )
 \subsection{Riferimenti}
 
  %SEZIONE RIF. NORMATIVI
@@ -68,6 +63,7 @@
     (Ultimo accesso: $2023-11-13$);   
     
     \item \textit{Verbali esterni ed interni};
+    \item \textit{Preventivo costi e impegni orario v0.0.1(23)}
     
     \item \textit{Dispense su ciclo di vita del SW}:\\
     \href{https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T2.pdf}{https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T2.pdf}\\
@@ -78,52 +74,29 @@
     (Ultimo accesso: $2023-11-13$).
 \end{itemize}
 
-
 \section{Calendario di massima del progetto}
-
 \subsection{Introduzione}
-\color{gray}(preventivo  della lettera di candidatura e stima completamento lavori sempre della candidatura)
-\color{black}
+\paragraph{a  differenza di quanto visto nel preventivo costi,  il team cercherà di presentare la candidatura rtb nel periodo bla bla}
+(preventivo  della lettera di candidatura e stima completamento lavori sempre della candidatura)
 
-\section{Stima dei costi di realizzazione}
+
+%\section{Stima dei costi di realizzazione}
 
 \section{Rischi e loro mitigazione}
 \paragraph{}Questa sezione di occupa di analizzare le difficoltà che si possono verificare durante lo svolgimento del progetto e che possono avere influenze sulla pianificazione delle attività, portando a rallentamenti e ostacoli nell'avanzamento.\\
 Per poter individuare e gestire questi rischi, vengono di seguito esaminati e corredati da descrizione, previsione della loro occorrenza e grado di pericolosità e infine da misure di mitigazione degli effetti negativi nel caso si verifichino.
+I rischi sono indicati con la notazione seguente: \\ R[Tipo]-[Numero] \ \  in cui:
+\begin{itemize}
+\item R sta per \textit{Rischio};
+\item Tipo indica il tipo che può essere tra i seguenti:
+    \begin{itemize}
+	\item P (Personale);
+	\item O (Organizzativo);
+	\item T (Tecnologico).
+    \end{itemize}
+\item Numero indica il numero in quella categoria.
+\end{itemize}
 
-\color{gray}\paragraph{ idee} (L' analisi dei rischi deve essere seguita da "gestione dei rischi" e da "valutazione efficacia delle pratiche di mitigazione" così da portare ad eventuali miglioramenti o correzioni delle stesse se non portano i risultati desiderati.)\\
-Possibile quindi la necessità di una tabella di feedback con seguenti indici:
-\begin{enumerate}
-    \item l’occorrenza di rischi
-    \item l’attuazione delle misure di mitigazione previste
-    \item la valutazione del loro esito
-\end{enumerate}
-   
-\paragraph{Valutazione efficacia delle misure di mitigazione} questa sezione può essere inserita nella sezione 8 di retrospettiva, comunque da segnalare qui dove si possono trovare i feedback.
-\paragraph{Cruscotto} il cruscotto di valutazione permette di individuare
-facilmente lo stato di completamento delle attività. Esso va aggiornato quanto più spesso possibile perché mandi segnali/notifiche utili per guidare il lavoro futuro, quindi non solo ad ogni rilascio esterno dei prodotti ma ad ogni caricamento in repository di artefatti verificati(per ogni documento?).\\
-\color{black}
-
-% TABELLA RISCHI
-
-Prova tabella orizzontale
-
-
-{\renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\textwidth}{c|X}
-%>{\columncolor{primarycolor}}
-\textbf{ID Rischio} & Esempio \\
-\hline
-\textbf{Rischio} &  \\
-\hline
-\textbf{Descrizione} & \\
-\hline
-\textbf{Occorrenza} & \\
-\hline
-\textbf{Impatto} & \\
-\hline
-\textbf{Misure di mitigazione} & \\
-\end{tabularx}
 
 %PERSONALI
 
@@ -133,8 +106,9 @@ Prova tabella orizzontale
 
 \subsubsection{Impegni e problemi personali}
 {\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
 \begin{tabularx}{\textwidth}{c|X}
-\textbf{ID Rischio} & Esempio \\
+\textbf{ID Rischio} & RP-1 \\
 \hline
 \textbf{Rischio} & Impegni e problemi personali\\
 \hline
@@ -144,63 +118,47 @@ Prova tabella orizzontale
 \hline
 \textbf{Impatto} & Alto\\
 \hline
-\textbf{Misure di mitigazione} & I membri interessati si impegnano ad avvisare tempestivamente il gruppo che per far fronte a tale rischio coprirà l’intervallo non produttivo del componente con una suddivisione omogenea tra i restanti colleghi delle attività rimaste in sospeso.
+\textbf{Misure di mitigazione} & I membri interessati si impegnano ad avvisare tempestivamente il gruppo; per far fronte a tale rischio si coprirà l’intervallo non produttivo del componente con una suddivisione omogenea tra i restanti colleghi delle attività rimaste in sospeso.
 Riuscire a non spostare la \textit{milestone} è prioritario.\\
-\end{tabularx}}
+\end{tabularx}
+\caption{Tabella rischi imprevisti e impegni personali}
+\end{table}}
 
 
 
 
-\subsubsection{Problemi fra componenti del gruppo}
+\subsubsection{Problemi fra i membri del gruppo}
 
 {\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
 \begin{tabularx}{\textwidth}{c|X}
-\textbf{ID Rischio} & Esempio \\
+\textbf{ID Rischio} & RP-2 \\
 \hline
-\textbf{Rischio} & Problemi fra componenti del gruppo  \\
+\textbf{Rischio} & Problemi fra i membri del gruppo  \\
 \hline
-\textbf{Descrizione} & \\
+\textbf{Descrizione} & Possono verificarsi divergenze di pensiero tra i componenti del gruppo che rischiano di portare a discussioni. \\
 \hline
-\textbf{Occorrenza} & \\
+\textbf{Occorrenza} & Media\\
 \hline
-\textbf{Impatto} & \\
+\textbf{Impatto} & Medio \\
 \hline
-\textbf{Misure di mitigazione} & \\
+\textbf{Misure di mitigazione} & Le parti prese in causa esporranno il loro punto di vista in maniera educata; il Responsabile è tenuto a fare da moderatore. \\
 \end{tabularx}
+\caption{Tabella divergenze interne}
+\end{table}
+}
 
-\begin{itemize}
-    \item Carico di lavoro personale eccessivo;\\ 
-     
-\end{itemize}
 
 %ORGANIZZATIVI
 
 \subsection{Rischi organizzativi}
 
-\subsubsection{Carico di lavoro distribuito in maniera non equilibrata}
-
-{\renewcommand{\arraystretch}{1.5}
-\begin{tabularx}{\textwidth}{c|X}
-\textbf{ID Rischio} & Esempio \\
-\hline
-\textbf{Rischio} & Carico di lavoro distribuito in maniera non equilibrata \\
-\hline
-\textbf{Descrizione} & \\
-\hline
-\textbf{Occorrenza} & \\
-\hline
-\textbf{Impatto} & \\
-\hline
-\textbf{Misure di mitigazione} & \\
-
-\end{tabularx}
-
-
 \subsubsection{Sottostima del tempo necessario per una attività}
 
 {\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
 \begin{tabularx}{\textwidth}{c|X}
-\textbf{ID Rischio} & Esempio \\
+\textbf{ID Rischio} & RO-1 \\
 \hline
 \textbf{Rischio} & Sottostima del tempo necessario per una attività\\
 \hline
@@ -210,51 +168,55 @@ Riuscire a non spostare la \textit{milestone} è prioritario.\\
 \hline
 \textbf{Impatto} & Alto\\
 \hline
-\textbf{Misure di mitigazione} & tale errore di valutazione deve essere reso noto al team nel modo più rapido possibile; chi ha disponibilità di tempo viene incaricato a fornire assistenza ai colleghi per minimizzare il ritardo nel completamento dell'obiettivo.\\
-
-\end{tabularx}}
+\textbf{Misure di mitigazione} & Tale errore deve essere reso noto al team tempestivamente; chi ha disponibilità viene incaricato di fornire assistenza per minimizzare il ritardo nel completamento dell'obiettivo.\\
+\end{tabularx}
+\caption{Tabella sottostima del tempo}
+\end{table}
 
 \subsubsection{Stima errata dei costi}
 
 {\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
 \begin{tabularx}{\textwidth}{c|X}
-\textbf{ID Rischio} & Esempio \\
+\textbf{ID Rischio} & RO-2 \\
 \hline
 \textbf{Rischio} & Stima errata dei costi \\
 \hline
-\textbf{Descrizione} & \\
+\textbf{Descrizione} & Potrebbe verificarsi una valutazione scorretta dei costi di incarico.\\
 \hline
-\textbf{Occorrenza} & \\
+\textbf{Occorrenza} & Media\\
 \hline
-\textbf{Impatto} & \\
+\textbf{Impatto} & Medio\\
 \hline
-\textbf{Misure di mitigazione} & \\
+\textbf{Misure di mitigazione} & Si provvederà a far uso dei diagrammi di Gantt per l'organizzazione delle attività lasciando dello "slack" tra le attività con dipendenze.\\
 \end{tabularx}
+\caption{Tabella stima errata dei costi}
+\end{table}
+
 
 
 \subsubsection{Disponibilità di lavoro non sfruttato}
 
 {\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
 \begin{tabularx}{\textwidth}{c|X}
-\textbf{ID Rischio} & Esempio \\
+\textbf{ID Rischio} & RO-3 \\
 \hline
 \textbf{Rischio} & Disponibilità di lavoro non sfruttato \\
 \hline
-\textbf{Descrizione} & \\
+\textbf{Descrizione} & Caso in cui un membro del team si ritrova del tempo produttivo "libero" senza attività assegnate al proprio ruolo che lo impegnino.\\
 \hline
-\textbf{Occorrenza} & \\
+\textbf{Occorrenza} & Media\\
 \hline
-\textbf{Impatto} & \\
+\textbf{Impatto} & Medio\\
 \hline
-\textbf{Misure di mitigazione} &  ""ho usufruito delle ore di scriba mentre avevo delle ore "libere" nonostante abbia ruolo di verificatore"" \\
+\textbf{Misure di mitigazione} & Il membro del team in questione viene invitato a farsi avanti e ad aiutare i membri in difficoltà o a farsi carico di attività non ancora assegnate anche non necessariamente legate al proprio ruolo in quel determinato \textit{sprint}. \\
+
 \end{tabularx}
+\caption{Tabella disponibilità non sfruttata}
+\end{table}
 
 
-\begin{itemize}
-    \item Carico di lavoro distribuito in modo non equilibrato;
-    \item Modifica requisiti in corso;
-    \item Ritardo di consegna (stima errata delle tempistiche).
-\end{itemize}
 
 %TECNOLOGICI
 
@@ -263,55 +225,137 @@ Riuscire a non spostare la \textit{milestone} è prioritario.\\
 \subsubsection{Scarsa esperienza con le tecnologie del progetto}
 
 {\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
 \begin{tabularx}{\textwidth}{c|X}
-\textbf{ID Rischio} & Esempio \\
+\textbf{ID Rischio} & RT-1 \\
 \hline
 \textbf{Rischio} & Scarsa esperienza con le tecnologie del progetto \\
 \hline
-\textbf{Descrizione} & \\
+\textbf{Descrizione} & Si possono verificare difficoltà di utilizzo di strumenti di lavoro o inesperienze\\
 \hline
-\textbf{Occorrenza} & \\
+\textbf{Occorrenza} & Alta\\
 \hline
-\textbf{Impatto} & \\
+\textbf{Impatto} & Alta\\
 \hline
-\textbf{Misure di mitigazione} & \\
+\textbf{Misure di mitigazione} & Il rischio non può essere evitato, dato che una buona esperienza con le tecnologie si ottiene con gli anni (tempo non a disposizione per questo progetto comunque complesso). Il primo passo è la comunicazione interna delle difficoltà più gravi.
+\begin{itemize}
+    \item Se le lacune riguardano le tecnologie usate abitualmente da AzzurroDigitale, è possibile richiedere un colloquio di formazione o supporto;
+    \item Se le tecnologie sono note solo ad alcuni membri del gruppo, questi si impegnano a realizzare dei workshop per portare a regime le conoscenze degli altri componenti;
+    \item Nel caso si parli di una tecnologia sconosciuta a tutti i membri, si prosegue cercando e studiando la guida utente e la documentazione associata.
+\end{itemize}
 \end{tabularx}
+\caption{Tabella scarsa esperienza tecnologica}
+\end{table}
 
 
 \subsubsection{Guasti hardware e problematiche software}
 
 {\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
 \begin{tabularx}{\textwidth}{c|X}
-\textbf{ID Rischio} & Esempio \\
+\textbf{ID Rischio} & RT-2 \\
 \hline
 \textbf{Rischio} & Guasti hardware e problematiche software \\
 \hline
-\textbf{Descrizione} & Si potrebbero presentare difficoltà legate all’hardware o al software utilizzati per cui un membro del gruppo potrebbe essere ostacolato nel portare a compimento un obiettivo o una attività. \\
+\textbf{Descrizione} & Si potrebbero presentare difficoltà legate all’hardware o al software utilizzati per cui un membro del gruppo risulta ostacolato nel portare a compimento un obiettivo o una attività. \\
 \hline
-\textbf{Occorrenza} & \\
+\textbf{Occorrenza} & Bassa \\
 \hline
-\textbf{Impatto} & \\
+\textbf{Impatto} & Medio\\
 \hline
-\textbf{Misure di mitigazione} & \\
+\textbf{Misure di mitigazione} & Comunicare tempestivamente il guasto al gruppo e se necessario chiedere aiuto e condivisione di un mezzo funzionante.\\
 \end{tabularx}
+\caption{Tabella guasti hardware e software}
+\end{table}
 
 
 \subsection{Valutazione efficacia delle misure}
-\paragraph{}Questa sezione riassume la sezione di analisi dei rischi e valuta l'efficacia delle pratiche di mitigazioni degli stessi nel caso questi si siano verificati.
+\paragraph{}Questa sezione riassume la sezione di analisi dei rischi e valuta l'efficacia delle pratiche di mitigazioni degli stessi nel caso questi si siano verificati.\\
+{\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{c|c|c|X}
+\textbf{ID Rischio} & \textbf{Occorrenza effettiva} & \textbf{Impatto effettivo} & \textbf{\quantities{Efficacia misure di \\mitigazione}} \\
+\hline
+RP-1 & - & - & -\\
+\hline
+RP-2 & - & - & - \\
+\hline
+RO-1 & - & - & -\\
+\hline
+RO-2 & - & - & -\\
+\hline
+RO-3 & - & - & -\\
+\hline
+RT-1 & - & - & -\\
+\hline
+RT-2 & - & - & -\\
 
 
-\section{Pianificazione}
+\end{tabularx}
+\caption{Tabella riassuntiva delle misure di mitigazione}
+\end{table}
 
-\color{gray}\paragraph{Sprint o Periodi}
-(descrizione suddivisione periodi in base a cosa? impostare la suddivisione sugli sprint o periodi di 14 giorni, NON SONO FASI).
-\color{black}
+
+\section{Pianificazione e modello di sviluppo}
+
+\paragraph{}Il team decide di adottare il modello di sviluppo \textit{Agile} 
+promuovendo un approccio incrementale al lavoro; questo consentirà di suddividere il progetto in compiti più gestibili, ovvero \textit{sprint}, ciascuno dei quali produrrà risultati funzionanti. Questo consente al team di progetto di reagire ai cambiamenti in modo più efficace.\\
+\paragraph{}I periodi individuati sono \textit{sprint} di 14 giorni con seguente rotazione dei ruoli assunti dai componenti del gruppo.\\
+Questo tipo di pianificazione permette di avere un orizzonte temporale limitato; ciò aiuta nel caso in cui vengano riscontrate difficoltà che causano danni ad attività che dipendono le une dalle altre, è possibile contenere questi ultimi e riorganizzare le attività nel periodo successivo.
 \subsection{Requirements and Technology Baseline}
-\subsubsection{Periodo da 2023-11-07 a 2023-11-21}
+\paragraph{}Questo periodo antecedente la revisione RTB di progetto si focalizza sulla preparazione dei documenti (Analisi dei requisiti, Piano di progetto, Piano di qualifica, ampliamento Norme di progetto) e alla creazione del Proof of Concept per il progetto.
+
+\subsubsection{Periodo da 2023-11-07 a 2023-11-20}
+
+
+
+\subsubsection{Periodo da 2023-11-21 a 2023-12-04}
+
+
+\subsubsection{Periodo da 2023-12-05 a 2023-12-18}
+
+
+
+
 
 \subsection{Product Baseline}
 
 
+
+\subsubsection{Periodo da 2023-12-19 a 2024-01-01}
+
+
+
+\subsubsection{Periodo da 2024-01-02 a 2024-01-15}
+
+
+
+\subsubsection{Periodo da 2024-01-16 a 2024-01-29}
+
+
+
+\subsubsection{Periodo da 2024-01-30 a 2024-02-12}
+
+
+
+\subsubsection{Periodo da 2024-02-13 a 2024-02-26}
+
+
+
+\subsubsection{Periodo da 2024-02-27 a 2024-03-11}
+
+
+\subsubsection{Periodo da 2024-03-12 a 2024-03-25}
+
+
+
+\subsubsection{Periodo da 2024-03-26 a 2024-04-08}
+
+
+
 \section{Preventivo}
+
+%Per queste voci si rimanda al documento “Preventivo costi e assunzione impegni”, presente nella repository Presentazio
 
 
 
